@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "----------------------------------"
 echo "Shell script to merge hipo files"
-echo "By: F.Hauenstein,"
-echo "    E.Segarra, and"
-echo "    R.Cruz-Torres"
+echo "By: F.Hauenstein  (fhauenst@odu.edu)"
+echo "    E.Segarra     (segarrae@mit.edu)"
+echo "    R.Cruz-Torres (reynier@mit.edu )"
 echo "----------------------------------"
 # ===========================================================================================
 # Check that an input list and output file are provided
