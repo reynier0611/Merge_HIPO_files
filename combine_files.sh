@@ -51,14 +51,7 @@ echo "----------------------------------"
 echo "Files that will be merged:"
 while IFS='' read -r line || [[ -n "$line" ]]; do
 	echo $line
-	if [ -f $line ]
-	then
-		fileList="$fileList $line"
-	else
-		echo "*** WARNING *** File: " $line " cannot be found"
-		echo "Bailing out!"
-		exit 1
-	fi
+	fileList="$fileList $line"
 done < "$1"
 # ===========================================================================================
 # Get the output file name
@@ -67,6 +60,3 @@ echo "----------------------------------"
 echo "Output file name: " $outfile
 # ===========================================================================================
 ./bin/hipoutils.sh -filter -e 330:331:332:335 -l 330:331:332:335:22121:22111:22112 -o $outfile $fileList
-
-#./bin/hipoutils.sh -filter -e 331 -l 331:330 -o myFilteredFile.hipo /lustre/expphy/volatile/clas12/hauenst/6164_round3_hipos/out_clas_006164.evio.00009.hipo /lustre/expphy/volatile/clas12/hauenst/6164_round3_hipos/out_clas_006164.evio.00010.hipo /lustre/expphy/volatile/clas12/hauenst/6164_round3_hipos/out_clas_006164.evio.00011.hipo
-#./bin/hipoutils.sh -filter -e 331 -l 331:330 -o myFilteredFile.hipo /lustre/expphy/volatile/clas12/hauenst/6164_round3_hipos/out_clas_006164.evio.0000*.hipo
